@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { Fragment } from 'react';
+import Contacts from '../contacts/Contacts';
+import ContactForm from '../contacts/ContactForm';
+import ContactFilter from '../contacts/ContactFilter';
 
 export const Home = () => {
     return (
-        <div>
-            <h1>Home is here</h1>
+        <div className="grid-2">
+            <div><ContactForm /></div>
+            <div><ContactFilter />
+                <Contacts /></div>
+
         </div>
     )
 }
