@@ -19,7 +19,7 @@ router.get('/', authMw, async (req, res) => {
         console.error(error.message);
         res.status(500).send({ msg: "server error!" })
     }
-    res.send('get auth');
+   
 });
 
 router.post('/',
@@ -41,13 +41,13 @@ router.post('/',
             let user = await User.findOne({ email });
 
             if (!user) {
-                return res.status(400).json({ msg: 'User does not exist' });
+                return res.status(400).json({ msg: 'Invalid Credentials' });
             }
 
             const isMatch = await bcrypt.compare(password, user.password);
 
             if (!isMatch)
-                return res.status(400).json({ msg: 'Incorrect password!' });
+                return res.status(400).json({ msg: 'Invalid Credentials' });
 
             const payload = {
                 user: {
