@@ -1,4 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://nakutanthi:IUkBASQeAgztJk2M@contactkeeper-l9dgq.mongodb.net/<dbname>?retryWrites=true&w=majority",
-    "jwtSecret": "yariguhelbedi"
+  "mongoURI": "mongodb+srv://nakutanthi:IUkBASQeAgztJk2M@contactkeeper-l9dgq.mongodb.net/<dbname>?retryWrites=true&w=majority",
+  "jwtSecret": "yariguhelbedi"
 }
